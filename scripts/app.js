@@ -1,17 +1,26 @@
 (function () {
-'use strict';
+    'use strict';
 
-angular.module('Assignment1NgApp', [])
+    angular.module('Assignment1NgApp', [])
+    .controller('Assignment1Controller', Assignment1Controller);
 
-.controller('Assignment1Controller', function ($scope) {
-  $scope.lunchList = "";
-  $scope.totallunchitems = 0;
+    Assignment1Controller.$inject = ['$scope'];
+    function Assignment1Controller($scope) {
+        $scope.menu = '';
+        $scope.message = '';
 
-  $scope.caltotallunchitems = function () {    
-    $scope.totallunchitems = $scope.lunchList.split(',').length;
-  };
+        $scope.check = function () {
+            if (!$scope.menu) {
+                $scope.message = 'Please enter data first.';
+            }
+            else {
+                var menu = $scope.menu;
+                menu = menu.split(' ').join('');
+                var length = menu.split(',').length;
 
-});
-
-
+                if (3 < length) $scope.message = 'Too much!';
+                else $scope.message = 'Enjoy!';
+            }
+        };
+    }
 })();

@@ -15,17 +15,17 @@
      <h1>Lunch Checker</h1>
  <div ng-controller="Assignment1Controller">
          <div class="form-group">
-             <input id="lunch-menu" type="text"  ng-model="lunchList"
+             <input id="lunch-menu" type="text"  ng-model="menu"
 
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control">
          </div>
          <div class="form-group">
-             <button class="btn btn-default" ng-click='caltotallunchitems()' >Check If Too Much</button>
+             <button class="btn btn-default" ng-click='check()' >Check If Too Much</button>
          </div>
          <div class="form-group message">          
            <!-- Your message can go here. -->
-           <p>Total Dishes for Lunch : {{totallunchitems}}</p>
+           {{message}}
          </div>
        </div>
    </div>
