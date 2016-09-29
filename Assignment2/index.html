@@ -36,7 +36,7 @@
      <ol class="item-list">
           <li ng-repeat="item in toBuy.items">
             Buy {{item.quantity}} {{item.name}}
-            <button type="button" class="btn btn-primary btn-xs" ng-click="toBuy.bought($index)">Bought</button>
+            <button type="button" class="btn btn-default" ng-click="toBuy.bought($index)"> <span class="glyphicon glyphicon-ok"></span>  Bought</button>
           </li>
         </ol>
         <div class="emptyMessage" ng-if="!toBuy.items.length">Everything is bought!</div>
