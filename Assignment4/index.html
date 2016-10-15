@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AngularJS</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+<body ng-app="MenuApp">
+<div id="wrap">
+  <div class="container" ng-controller="MenuAppController as menu" id="main">
+    <div class="row">
+      <div class="col-xs-12">
+        <h1>Chinese restaurant</h1>
+      </div>
+    </div>
+    <div class="row">
+      <ui-view></ui-view>
+    </div>
+    
+  </div>
+</div>
+
+  
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/angular.min.js"></script>
+  <script src="js/angular-ui-router.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  
+  <script src="MenuApp/data.module.js"></script>
+  <script src="MenuApp/menuapp.module.js"></script>
+  <script src="MenuApp/menuapp.controller.js"></script>
+  <script src="MenuApp/menudata.service.js"></script>
+
+  
+  <script src="category/categories.controller.js"></script>
+  <script src="category/categories.component.js"></script>
+
+  <!-- Items -->
+  <script src="items/items.controller.js"></script>
+  <script src="items/items.component.js"></script>
+
+  <!-- Routes -->
+  <script src="routes.js"></script>
+  
+</body>
+</html>
